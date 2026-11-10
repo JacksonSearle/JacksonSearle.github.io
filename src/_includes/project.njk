@@ -1,0 +1,35 @@
+---
+layout: base.njk
+---
+<article class="project">
+  <p class="back"><a href="{{ '/' | url }}">&larr; All projects</a></p>
+  <p class="eyebrow">{{ title }}</p>
+  <h1>{{ headline }}</h1>
+  <p class="lead">{{ summary }}</p>
+  {% if live -%}
+  <p><a class="button" href="{{ live }}">Open the live site</a></p>
+  {%- endif %}
+  {% if demo -%}
+  <p><a class="button" href="{{ demo | url }}">Try the demo</a></p>
+  {%- endif %}
+
+  <div class="prose">
+    {{ content | safe }}
+  </div>
+
+  <section class="meta">
+    <h2>Tech stack</h2>
+    <ul class="stack">
+      {%- for item in stack %}
+      <li>{{ item }}</li>
+      {%- endfor %}
+    </ul>
+
+    <h2>Code</h2>
+    {% if code -%}
+    <p><a class="button" href="{{ code }}">View the code on GitHub</a></p>
+    {%- else -%}
+    <p>{% todo "add the GitHub link for " + title + " (set `code:` at the top of its Markdown file)" %}</p>
+    {%- endif %}
+  </section>
+</article>

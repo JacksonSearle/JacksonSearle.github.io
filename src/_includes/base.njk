@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if title %}{{ title }} · {% endif %}{{ site.name }}</title>
+  <meta name="description" content="{{ summary or site.description }}">
+  <link rel="stylesheet" href="{{ '/assets/style.css' | url }}">
+</head>
+<body>
+  <header class="top">
+    <div class="wrap top__row">
+      <a class="top__name" href="{{ '/' | url }}">{{ site.name }}</a>
+      <nav class="top__links" aria-label="Contact">
+        <a href="mailto:{{ site.email }}">Email</a>
+        <a href="{{ site.github }}">GitHub</a>
+        <a href="{{ site.linkedin }}">LinkedIn</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    {{ content | safe }}
+  </main>
+
+  <footer class="wrap foot">
+    <span>{{ site.name }}</span>
+    <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+  </footer>
+</body>
+</html>

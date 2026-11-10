@@ -1,0 +1,30 @@
+---
+layout: base.njk
+---
+<section class="intro">
+  <h1>{{ site.tagline }}</h1>
+  <p>{{ site.intro }}</p>
+  <p>{{ site.credentials | safe }}</p>
+  <p class="intro__links">
+    <a class="button" href="mailto:{{ site.email }}">{{ site.email }}</a>
+    <a href="{{ site.github }}">GitHub</a>
+    <a href="{{ site.linkedin }}">LinkedIn</a>
+  </p>
+</section>
+
+<section aria-labelledby="projects-heading">
+  <h2 id="projects-heading" class="section-title">Projects</h2>
+  <div class="cards">
+    {%- for p in collections.projects %}
+    <a class="card" href="{{ p.url | url }}">
+      {% shot p.data.thumb, p.data.thumbAlt, "thumb" %}
+      <div class="card__body">
+        <p class="eyebrow">{{ p.data.title }}</p>
+        <h3>{{ p.data.headline }}</h3>
+        <p>{{ p.data.summary }}</p>
+        <span class="card__more">How it works &rarr;</span>
+      </div>
+    </a>
+    {%- endfor %}
+  </div>
+</section>

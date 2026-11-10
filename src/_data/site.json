@@ -1,0 +1,10 @@
+{
+  "name": "Jackson Searle",
+  "tagline": "I build software that takes over repetitive manual work and hands the uncertain cases to a person.",
+  "intro": "I'm a Computer Science master's student (AI focus) at BYU, graduating April 2028, and I'm looking for an AI/ML engineering internship.",
+  "credentials": "I spent two years as a software engineer at Epsilon Systems building multimodal AI systems, and I co-authored a <a href=\"https://doi.org/10.1145/3544548.3581441\">CHI 2023 paper</a> on grounding language model output in a knowledge graph.",
+  "description": "Projects by Jackson Searle: document checking with human review, data pipelines, dashboards and machine learning.",
+  "email": "jacksonjaysearle@gmail.com",
+  "github": "https://github.com/JacksonSearle",
+  "linkedin": "https://linkedin.com/in/jackson-searle"
+}

@@ -1,0 +1,15 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Jackson Searle's project portfolio (static site, hosted on GitHub Pages).",
+  "scripts": {
+    "dev": "eleventy --serve --port 8090",
+    "build": "eleventy",
+    "sync-demo": "rm -rf demos/mill-cert-checker && cp -R ../mill-cert-checker/app demos/mill-cert-checker"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.2"
+  }
+}
